@@ -6,7 +6,7 @@ remove="rm"
 
 name="tf-nb"
 #image="tensorflow/tensorflow:latest-gpu-py3-jupyter"
-image="tf-z"
+image="tf"
 
 #-u $(id -u ${USER}):$(id -g ${USER}) \
 
