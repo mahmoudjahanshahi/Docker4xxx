@@ -5,8 +5,8 @@
 - Tensorflow: Docker4tensorflow_gpu
 
 ## Usage
-```
 For each environment cd to the directory, then do the build and run. For example, for the Pytorch environment:
+```
 cd Docker4pt
 bash build.sh
 bash docker_run.sh run
