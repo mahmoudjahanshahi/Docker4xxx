@@ -5,7 +5,7 @@ bash="bash"
 remove="rm"
 
 name="pt-nb"
-image="pt-z"
+image="pt"
 
 #-u $(id -u ${USER}):$(id -g ${USER}) \
 
