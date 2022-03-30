@@ -11,12 +11,22 @@ cd Docker4pt
 bash build.sh
 bash docker_run.sh run
 ```
+To run jupyter notebook and tensorboard:
+Ports 8888 and 6006 are default ports for running Jupyter notebook and tensorboard.
+- Jupyter notebook: 
+```
+   jupyter-notebook --allow-root --port 8888 --ip=0.0.0.0 --no-browser
+```
+- Tensorboard: 
+```
+    tensorboard --logdir <dir to keep the logs>
+```
 
-## Other
-Inside the container
-- Two active ports: 8888 and 6006 (when running Jupiter notebook and tensorboard, can use their default ports inside the container)
-- NOTE: Just run tensorboard and Jupiter notebook on their default port, and will be redirected (see **outside the container**)
 
-Outside the container
-- Redirect to ports 8888 and 8889 for Jupiter notebook
-- Redirect to ports 6006 and 6007 for tensorboard
+## Notes
+ - You may add additional packages to the DockerFile
+ - For permission purposes, you need to add your uid to the Dockerfile as follows (note to use your own netid and uid):
+```
+RUN echo "zyang37:x:3944:" >> /etc/group
+RUN echo "zyang37:x:26388:3944:Zhenning Yang,620,,:/home/zyang37:/bin/bash" >> /etc/passwd
+```
