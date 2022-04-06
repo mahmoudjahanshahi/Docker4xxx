@@ -13,13 +13,25 @@ bash docker_run.sh run
 ```
 To run jupyter notebook and tensorboard:
 Ports 8888 and 6006 are default ports for running Jupyter notebook and tensorboard.
-- Jupyter notebook: 
+
+- Jupyter-notebook: 
 ```
-   jupyter-notebook --allow-root --port 8888 --ip=0.0.0.0 --no-browser
+jupyter-notebook --allow-root --port 8888 --ip=0.0.0.0 --no-browser
 ```
+
+- Jupyter-lab (Recommended): 
+```
+jupyter-lab --allow-root --port 8888 --ip=0.0.0.0 --no-browser
+```
+
+For Jupyter-notebook and Jupyter-lab, multiple people could use the same session, simply run the following to get the token for the token. 
+```
+jupyter server list
+```
+
 - Tensorboard: 
 ```
-    tensorboard --logdir <dir to keep the logs>
+tensorboard --logdir <dir to keep the logs> --host 0.0.0.0 --port 6006
 ```
 
 
