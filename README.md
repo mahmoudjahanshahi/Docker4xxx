@@ -9,8 +9,19 @@ For each environment cd to the directory, then do the build and run. For example
 ```
 cd Docker4pt
 bash build.sh
+
+# Run a container for the 1st time
 bash docker_run.sh run
+
+# Get into a built container
+bash docker_run.sh bash
+# OR
+docker exec -it CONTAINER_NAME bash
+
+# To remove a container
+bash docker_run.sh rm
 ```
+
 To run jupyter notebook and tensorboard:
 Ports 8888 and 6006 are default ports for running Jupyter notebook and tensorboard.
 
