@@ -8,7 +8,8 @@
 
 ### Back-ups
 * Back-ups location: ```da1: /home/anau/MongoDB/dumps```
-* Back-up command: ```docker exec [container_id] sh -c 'exec mongodump -d mean-dev --archive' > [date].dump```
+* Back-up command: ```docker exec <mongodb container> sh -c 'mongodump --archive' > db.dump```
+* Restore command: ```docker exec -i <mongodb container> sh -c 'mongorestore --archive' < db.dump```
 
 ### Other 
 * Helpful link: https://hub.docker.com/_/mongo
