@@ -1,4 +1,5 @@
-FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+#FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+FROM tensorflow/tensorflow:latest-gpu-jupyter
 
 ENV DEBIAN_FRONTEND=nonintercative
 
