@@ -8,7 +8,7 @@
   * Back-up: da1:/home/anau/MongoDB/dumps/20221011.dump
 
 ### Back-ups
-* Back-ups location: ```da1: /home/anau/MongoDB/dumps```
+* Back-ups location: ```da1: /home/anau/MongoDB/backups```
 
 ### Commands
 * Create MongoDB container: ```docker run --name <container_name> -d <mongo_image>```
