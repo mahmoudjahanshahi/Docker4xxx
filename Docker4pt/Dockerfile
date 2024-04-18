@@ -23,17 +23,23 @@ RUN pip install tqdm
 RUN pip install matplotlib
 RUN pip install pandas
 
-RUn pip install --upgrade jupyter_client
+RUN pip install --upgrade jupyter_client
 RUN pip install ipywidgets
 RUN jupyter nbextension enable --py widgetsnbextension
 RUN pip install jupyterlab
 # RUN pip install torchvision -U
 
-RUN echo "mousavi:x:4477:" >> /etc/group
-RUN echo "mousavi:x:25044:4477:Sara Mousavi,620,,:/home/mousavi:/bin/bash" >> /etc/passwd
+RUN apt install tmux
+RUN pip install fuzzywuzzy
+RUN pip install transformers
+RUN pip install python-Levenshtein
+RUN pip install javalang
 
-RUN echo "zyang37:x:3944:" >> /etc/group
-RUN echo "zyang37:x:26388:3944:Zhenning Yang,620,,:/home/zyang37:/bin/bash" >> /etc/passwd
+# RUN echo "mousavi:x:4477:" >> /etc/group
+# RUN echo "mousavi:x:25044:4477:Sara Mousavi,620,,:/home/mousavi:/bin/bash" >> /etc/passwd
+
+# RUN echo "zyang37:x:3944:" >> /etc/group
+# RUN echo "zyang37:x:26388:3944:Zhenning Yang,620,,:/home/zyang37:/bin/bash" >> /etc/passwd
 
 WORKDIR "/root"
 CMD ["/bin/bash"]
