@@ -29,7 +29,7 @@ RUN jupyter nbextension enable --py widgetsnbextension
 RUN pip install jupyterlab
 # RUN pip install torchvision -U
 
-RUN apt install tmux
+RUN apt install -y tmux
 RUN pip install fuzzywuzzy
 RUN pip install transformers
 RUN pip install python-Levenshtein
